@@ -11,11 +11,17 @@ export default function Manage() {
     localStorage.setItem("items", JSON.stringify(items));
   };
 
-  const handleNameChange = (e) => {
+  const getLocalstorage = () => {
+    const items = localStorage.getItem("items");
+    if (items) return JSON.parse(items);
+    else return [];
+  };
+
+  function handleNameChange(e) {
     const value = e.target.value;
     value.toLowerCase();
     setName(value);
-  };
+  }
 
   function handleAdd() {
     const newItem = {
@@ -69,17 +75,27 @@ export default function Manage() {
     setLocalstorage(items);
   }
 
+  const deleteBtnStyle = {
+    width: "60",
+    textalign: "center",
+  };
+
   return (
     <main className={styles.manage}>
       <h1 className={styles.title}>在庫一覧</h1>
 
-      <table className={styles.table}>
+      <table
+        style={
+          width: "100%",
+          borderCollapse: "collapse",
+        }
+      >
         <thead>
           <tr>
             <th>商品名</th>
             <th>単価</th>
             <th>数量</th>
-            <th style="width: 60px, text-align: center">削除</th>
+            <th style={deleteBtnStyle}>削除</th>
           </tr>
         </thead>
 
