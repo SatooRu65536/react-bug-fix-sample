@@ -122,21 +122,21 @@ export default function Manage() {
             type="text"
             placeholder="商品名"
             value={name}
-            onChange={handleNameChange}
+            onClick={handleNameChange}
           />
           <label>単価:</label>
           <input
             type="number"
             placeholder="単価"
             value={price}
-            onChange={(e) => setPrice(e.target.value)}
+            onClick={setPrice}
           />
           <label>数量:</label>
           <input
             type="number"
             placeholder="数量"
             value={stock}
-            onChange={(e) => setStock(e.target.value)}
+            onClick={(e) => setStock(e)}
           />
         </div>
 
