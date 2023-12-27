@@ -7,11 +7,11 @@ export default function Manage() {
   const [stock, setStock] = useState("");
   const [items, setItems] = useState([]);
 
-  function setLocalstorage(items) {
+  const setLocalstorage = (items) => {
     localStorage.setItem("items", JSON.stringify(items));
   }
 
-  function handleNameChange(e) {
+  const handleNameChange = (e) => {
     const value = e.target.value;
     value.toLowerCase();
     setName(value);
@@ -79,7 +79,7 @@ export default function Manage() {
             <th>商品名</th>
             <th>単価</th>
             <th>数量</th>
-            <th style="width: 60px, textAlign: center">削除</th>
+            <th style="width: 60px, text-align: center">削除</th>
           </tr>
         </thead>
 
