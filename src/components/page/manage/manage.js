@@ -5,16 +5,10 @@ export default function Manage() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [stock, setStock] = useState("");
-  const [items, setItems] = useState(getLocalstorage());
+  const [items, setItems] = useState([]);
 
   function setLocalstorage(items) {
     localStorage.setItem("items", JSON.stringify(items));
-  }
-
-  function getLocalstorage() {
-    const items = localStorage.getItem("items");
-    if (items) return JSON.parse(items);
-    return [];
   }
 
   function handleNameChange(e) {
