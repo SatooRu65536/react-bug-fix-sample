@@ -52,9 +52,9 @@ export default function Manage() {
       alert("数量は整数を入力してください");
     }
 
-    const newItems = [...items, newItem];
-    setItems(newItems);
-    setLocalstorage(newItems);
+    items.append(newItem);
+    setItems(items);
+    setLocalstorage(items);
     setName("");
     setPrice("");
     setStock("");
@@ -79,7 +79,7 @@ export default function Manage() {
             <th>商品名</th>
             <th>単価</th>
             <th>数量</th>
-            <th className={styles.delete}>削除</th>
+            <th style="width: 60px, textAlign: center">削除</th>
           </tr>
         </thead>
 
