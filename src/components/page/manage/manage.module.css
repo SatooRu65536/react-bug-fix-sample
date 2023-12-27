@@ -1,0 +1,58 @@
+.manage {
+  min-height: calc(100vh - 70px - 24px);
+  padding: 20px 50px;
+}
+
+.title {
+  padding: 10px;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 5px;
+  border: solid 1px var(--text);
+}
+
+.table .delete {
+  width: 60px;
+  text-align: center;
+}
+
+.table .delete input {
+  padding: 2px;
+  cursor: pointer;
+}
+
+.name input {
+  width: 100%;
+}
+
+.container {
+  padding: 50px;
+  display: flex;
+}
+
+.container .add_list {
+  width: fit-content;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 100px 200px;
+  gap: 5px;
+}
+
+.container .add_list input {
+  padding: 2px;
+  font-size: 1rem;
+}
+
+.container .add {
+  padding: 5px;
+  display: flex;
+  flex-flow: column-reverse;
+}
