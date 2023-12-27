@@ -19,8 +19,8 @@ export default function Manage() {
 
   function handleNameChange(e) {
     const value = e.target.value;
-    const upperCaseValue = value.toLowerCase();
-    setName(upperCaseValue);
+    value.toLowerCase();
+    setName(value);
   }
 
   function handleAdd() {
