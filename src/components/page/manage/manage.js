@@ -5,7 +5,17 @@ export default function Manage() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [stock, setStock] = useState("");
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(getLocalstorage());
+
+  function setLocalstorage(items) {
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+
+  function getLocalstorage() {
+    const items = localStorage.getItem("items");
+    if (items) return JSON.parse(items);
+    return [];
+  }
 
   function handleNameChange(e) {
     const value = e.target.value;
@@ -45,7 +55,9 @@ export default function Manage() {
       return;
     }
 
-    setItems([...items, newItem]);
+    const newItems = [...items, newItem];
+    setItems(newItems);
+    setLocalstorage(newItems);
     setName("");
     setPrice("");
     setStock("");
@@ -54,6 +66,7 @@ export default function Manage() {
   function handleDelete(index) {
     const newItems = items.filter((item, i) => i !== index);
     setItems(newItems);
+    setLocalstorage(newItems);
   }
 
   return (
