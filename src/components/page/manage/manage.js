@@ -9,13 +9,13 @@ export default function Manage() {
 
   const setLocalstorage = (items) => {
     localStorage.setItem("items", JSON.stringify(items));
-  }
+  };
 
   const handleNameChange = (e) => {
     const value = e.target.value;
     value.toLowerCase();
     setName(value);
-  }
+  };
 
   function handleAdd() {
     const newItem = {
@@ -84,7 +84,7 @@ export default function Manage() {
         </thead>
 
         <tbody>
-          {items.map((item, i) => (
+          {items.forEach((item, i) => (
             <tr key={i}>
               <td className={styles.name}>{item.name}</td>
               <td>{item.price}円</td>
@@ -92,7 +92,7 @@ export default function Manage() {
               <td className={styles.delete}>
                 <input type="button" value="削除" onClick={handleDelete} />
               </td>
-            </tr>
+            </tr>s
           ))}
         </tbody>
       </table>
