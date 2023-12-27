@@ -32,42 +32,34 @@ export default function Manage() {
 
     if (items.some((item) => item.name === newItem.name)) {
       alert("商品名が重複しています");
-      return;
     }
 
     if (newItem.name === "") {
       alert("商品名を入力してください");
-      return;
     }
 
     if (newItem.price === "") {
       alert("単価を入力してください");
-      return;
     }
 
     if (newItem.stock === "") {
       alert("数量を入力してください");
-      return;
     }
 
     if (newItem.price < 0) {
       alert("単価は0以上を入力してください");
-      return;
     }
 
     if (newItem.stock < 0) {
       alert("数量は0以上を入力してください");
-      return;
     }
 
     if (!Number.isInteger(Number(newItem.price))) {
       alert("単価は整数を入力してください");
-      return;
     }
 
     if (!Number.isInteger(Number(newItem.stock))) {
       alert("数量は整数を入力してください");
-      return;
     }
 
     const newItems = [...items, newItem];
