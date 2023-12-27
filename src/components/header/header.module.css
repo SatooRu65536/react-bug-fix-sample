@@ -1,0 +1,11 @@
+.header {
+  height: 70px;
+  text-align: center;
+  color: var(--background);
+  background-color: var(--primary);
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  line-height: 70px;
+}
