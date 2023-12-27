@@ -74,9 +74,9 @@ export default function Manage() {
     const res = window.confirm(`${items[index].name} を削除します`);
     if (!res) return;
 
-    const newItems = items.filter((item, i) => i !== index);
-    setItems(newItems);
-    setLocalstorage(newItems);
+    items.filter((item, i) => i !== index);
+    setItems(items);
+    setLocalstorage(items);
   }
 
   return (
