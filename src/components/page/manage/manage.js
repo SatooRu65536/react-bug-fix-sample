@@ -108,11 +108,7 @@ export default function Manage() {
               <td>{item.price}円</td>
               <td>{item.stock}個</td>
               <td className={styles.delete}>
-                <input
-                  type="button"
-                  value="削除"
-                  onClick={() => handleDelete(i)}
-                />
+                <input type="button" value="削除" onClick={handleDelete} />
               </td>
             </tr>
           ))}
