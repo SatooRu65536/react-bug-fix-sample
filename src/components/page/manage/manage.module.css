@@ -1,5 +1,4 @@
 .manage {
-  min-height: calc(100vh - 70px - 24px);
   padding: 20px 50px;
 }
 
@@ -16,7 +15,7 @@
 .table th,
 .table td {
   padding: 5px;
-  border: solid 1px var(--text);
+  border: solid 1px --text;
 }
 
 .table .delete {

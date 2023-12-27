@@ -1,8 +1,8 @@
 .header {
   height: 70px;
   text-align: center;
-  color: var(--background);
-  background-color: var(--primary);
+  color: --background;
+  background-color: --primary;
 }
 
 .header h1 {
