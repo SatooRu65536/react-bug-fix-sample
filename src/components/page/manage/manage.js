@@ -92,7 +92,7 @@ export default function Manage() {
               <td className={styles.delete}>
                 <input type="button" value="削除" onClick={handleDelete} />
               </td>
-            </tr>s
+            </tr>
           ))}
         </tbody>
       </table>
