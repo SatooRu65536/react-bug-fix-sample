@@ -30,10 +30,6 @@ export default function Manage() {
       stock: stock,
     };
 
-    if (items.some((item) => item.name === newItem.name)) {
-      alert("商品名が重複しています");
-    }
-
     if (newItem.name === "") {
       alert("商品名を入力してください");
     }
