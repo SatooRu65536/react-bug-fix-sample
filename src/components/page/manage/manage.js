@@ -62,7 +62,7 @@ export default function Manage() {
 
   function handleDelete(index) {
     const res = window.confirm(`${items[index].name} を削除します`);
-    if (!res) return;
+    if (res) return;
 
     items.filter((item, i) => i !== index);
     setItems(items);
